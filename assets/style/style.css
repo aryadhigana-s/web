@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: whitesmoke;
+    margin: 0;
+    padding: 0;
+ }
+
+header {
+    overflow: hidden;
+    background-color: white;
+    top: 0;
+    display: inline;
+ 
+  }
+
+ nav {
+     background: white;
+     height: 80px;
+     width: 100%;
+     z-index: 12;
+     position: fixed;
+     top: 0;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.51);
+ }
+ label.logo{
+     color: turquoise;
+     font-size: 35px;
+     line-height: 80px;
+     padding: 0 70px;
+     font-weight: bold;
+ }
+
+ nav ul{
+     float: right;
+     background-color:transparent;
+    padding: 10px 45px;
+    width: 500px;
+    margin-right: 40px;
+    margin-top: 20px;
+    border-radius: 100px;
+    z-index: 5;
+    
+ }
+
+ main {
+    padding: 20px;
+    min-height: calc(100vh - 20px - 110px);
+    margin-bottom: 200px;
+}
+ nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 9px;
+ }
+
+ nav a{
+     color: turquoise;
+     display: inline-block;
+     font-size: 17px;
+     font-weight: 500;
+     margin-right: 5px;
+     padding: 2px 5px;
+     border-radius: 3px;
+     text-decoration: none;
+     text-transform: uppercase;
+ }
+
+ .cool-link::after{
+     content: '';
+     display: block;
+     width: 0;
+     height: 2px;
+     background: turquoise;
+     transition: width .3s;
+ }
+
+ .cool-link:hover::after{
+     width: 100%;
+     transition: width .3s;
+ }
+
+
+ .featured-image {
+    max-width: 500px;
+	align-content: center;
+	object-fit: cover;
+    object-position: center;
+    
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: turquoise;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.small {
+    max-height: 700px;
+    margin-top: 25px;
+    position: absolute;
+    left: 800px;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.99) ;
+}
+
+article {
+    position: relative; 
+    top: 300px;
+    z-index: 4;
+    
+}
+
+#content {
+    text-align: center;
+    width: 100%;
+    margin: 110px auto;
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 3.5em;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+#Home {
+    color: turquoise;
+    margin-bottom: 200px; 
+    
+}
+
+#Home h2{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Home p{
+    font-weight: 32px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color:black;
+    background-color: rgba(64,224,208);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.99);
+    background-blend-mode: lighten;
+    padding: 15px;
+    border-radius: 100px;
+}
+
+
+.card {
+    box-shadow: 0 0 0 0 rgba(0, 0,0,0.2);
+}
+
+#Profile{
+    color: aliceblue;
+    text-align: left;
+    width: 60%;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+#Works h2{
+    background-color: rgb(52, 48, 48);
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.99) ;
+}
+
+#Works p{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box {
+    width: 100%;
+    height: 70%;
+    margin-top: 200px;
+    background: turquoise;
+    position: absolute;
+    z-index: auto;
+    right: 0;
+    
+}
+
+.atas{
+    background: url('../image/gambar1.jpg');
+    top:-200px;
+    filter: brightness(30%) blur(12px);
+    height: 150%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slider, .wrap, .slide-content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 800px;
+    overflow-x: hidden;
+}
+
+#slider{
+    top:-200px;    
+}
+
+.wrap{
+    position: relative;
+    height: 10px;
+}
+.slide{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1{
+    background-image: url("../image/rumah.jpg");
+}
+.slide2{
+    background-image: url("../image/restoran2.jpg");
+}
+.slide3{
+    background-image: url("../image/umum2.jpg");
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size: 16px;
+    color: white;
+    background: turquoise;
+    text-align: center;
+    border-radius: 100px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.99) ;
+}
+
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    
+}
+
+#arrow-left{
+    border-width: 30px 40px 30px 0;
+    border-color: transparent turquoise transparent transparent;
+    left: 0;
+    margin-left: 10%;
+}
+
+#arrow-left:hover{
+    transform: scale(1.2);
+}
+
+#arrow-right{
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent turquoise;
+    right: 0;
+    margin-right: 10%;
+}
+
+#arrow-right:hover{
+    transform: scale(1.2);
+}
+
+footer {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+aside h2{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: turquoise;
+    color: white;
+    border-radius: 10px;
+    box-shadow: -2px 37px 57px -3px rgba(0,0,0,0.51);
+}
+
+aside p{
+    font-size: 30px;
+}
+.container{
+    display: flex;
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.99);
+    background: black;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 15px turquoise;
+}
+
+.inside {
+    flex-grow: 1;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+}
+.img-aside{
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+@media(max-width: 1300px){
+
+    .slide-content span{
+        margin-top: -100px;
+    }
+    .box{
+        height: 750px;
+        margin-top: 100px;
+    }
+    .small{
+        left: 500px;
+        height: 1000px;
+    }
+    .atas{
+        margin-top: 200px;
+    }
+    .tosca{
+        margin-top: 150px;
+    }
+}
+
+@media(max-width: 1100px){
+    .box{
+        height: 750px;
+    }
+
+    .atas{ 
+        top:-800px;
+        height: 1500px;
+    }
+
+}
+
+@media(max-width: 1000px){
+    .box{
+        height: 850px;
+    }
+    label.logo{
+        font-size: 38px;
+        padding-left: 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    
+    .small{
+        max-height: 670px;
+        margin-top: 200px;
+        left: 400px;
+    }
+    #Profile{
+        background: turquoise;
+        margin-left: 20%;
+        margin-right: auto;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 300px;
+        box-shadow: -2px 37px 57px -3px rgba(0,0,0,0.51);
+        background: turquoise;
+        top: 60px;
+        display: none;
+        text-align: center;
+        border-radius: 0px;
+        
+    }
+
+    #Profile{
+        color: aliceblue;
+        text-align: left;
+        right: 100px;
+        margin-bottom: 100px;
+    }
+
+    nav li{
+        display: block;
+        margin-top: 20px;
+    }
+
+    nav a{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+
+    a:hover{
+        background: none;
+        color: black;
+    }
+
+    footer p{
+        font-size: 8px;
+    }
+
+    #Home p{
+        padding: 20px;
+        
+    }
+    .atas{ 
+        top:-800px;
+        height: 1500px;
+    }
+    
+}
+
+@media(max-width: 600px){
+    label.logo{
+        font-size: 28px;
+    }
+    .box{
+        height: 2250px;
+    }
+    
+
+
+
+}
